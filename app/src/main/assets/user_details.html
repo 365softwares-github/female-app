@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medi Gate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet"/>
+    <link href="css/slick-theme.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/responsive.css" rel="stylesheet"/>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/require.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript" defer></script>
+</head>
+<body>
+  <!-- <div class="loader" id="loader">
+  <img src="images/loading_icon_ball.gif" class="" alt="page loder">
+</div> -->
+<style media="screen">
+  .product_img{
+    /* height:40vh; */
+    position:relative
+  }
+
+  .wallet_bln{
+    position: absolute;
+      right: 5%;
+      top: 2%;
+      color: #fff;
+      background: #EF4765;
+      padding: 4px 8px;
+      font-size: 14px;
+      border-radius: 5px;
+  }
+</style>
+    <div class="wrapper" style="padding-bottom:0;">
+
+<div class="container">
+
+  <header>
+      <div class="back_arrow">
+          <a onclick="history.back()">
+              <img src="images/back_arrow.png" alt="back_arrow">
+          </a>
+      </div>
+      <div class="page_head">
+          <h2>View Details</h2>
+      </div>
+      <div class="cart">
+          <a href="account.html"><img src="images/menu.png" alt="cart"></a>
+      </div>
+      <div class="logo2" style="display:block!important;width:35px">
+        <a href="javascript:void(0)"><img src="images/notice.png" alt="logo"class="img-fluid"><span>5</span></a>
+      </div>
+
+  </header>
+  <div style="">
+      <ul class="sagest_box">
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+      </ul>
+  </div>
+</div>
+  <div class="product_img text-center"><img src="images/user_details.png" class="profile_img" style="width:180px;height:180px;border-radius:50%;margin:0 auto;" alt="details_img">
+    <p class="wallet_bln">₹<span class="total_bal"></span>/-</p>
+  </div>
+    <div class="block detail_block" style="position:relative;border-radius:0;">
+
+        <div class="detail_cnt text-center" style="">
+
+
+            <h2 class="product_name"></h2>
+
+            <p class="product_price about"></p>
+            <div class="hoby" style="margin-bottom:20px">
+          
+            </div>
+            <button class="btn btn-light chat_rooms" style="background:transparent;border-color:transparent"> <img src="images/start_chat.png" alt=""> </button>
+          </div>
+
+    </div>
+    <!-- <div class="detail_btns">
+        <button class="btn btn-light"> <img src="images/call.png" alt=""> </button>
+        <button class="btn btn-light"><img src="images/video.png" alt=""></button>
+    </div> -->
+<!-- </div> -->
+<nav class="footer-header" style="">
+    <!-- Left navbar links -->
+    <ul class="w-100">
+
+        <li class="">
+            <a href="home.html">
+                <div class="icon">
+                    <!-- <i class="fas fa-th-large"></i> -->
+                    <img src="images/Home_Icon.png"  >
+                </div>
+                <!-- <p>Contents</p> -->
+            </a>
+        </li>
+        <li class="">
+            <a href="wallet.html">
+                <div class="icon">
+                    <!-- <i class="fa-regular fa-circle-question"></i> -->
+                    <img src="images/Chat_Icon.png" alt=""  >
+                    <!-- <i class="fa-solid fa-circle-question"></i> -->
+                </div>
+                <!-- <p>Goals</p> -->
+            </a>
+        </li>
+
+        <li class="">
+            <a class="notice" href="wishlist.html">
+                <div class="icon">
+                    <img src="images/Love_Icon.png" alt=""  >
+                </div>
+            </a>
+        </li>
+        <li class="">
+            <a class="" href="account.html">
+                <div class="icon">
+                    <img src="images/Profile_Icon.png" alt=""  >
+                    <!-- <i class="fas fa-indent"></i> -->
+                </div>
+            </a>
+        </li>
+
+    </ul>
+
+    <!-- Right navbar links -->
+
+</nav>
+</div>
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+  <script src="sweetalert2/sweetalert2.min.js"></script>
+<script src="js/slick.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  
+
+  $(document).on('click','.logo2',function () {
+    // $('.sagest_box').css('top','0');
+    $('.sagest_box').fadeToggle('slow');
+  })
+
+  var getQueryString = function (field, url) {
+      var href = url ? url : window.location.href;
+      var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
+      var string = reg.exec(href);
+      return string ? string[1] : null;
+
+    };
+
+    var phone_no = getQueryString('id'); // returns 'chicken'
+    $('.chat_rooms').click(function(){
+    window.location.href="chat_rooms.html?male_id="+phone_no;
+  })
+    $.ajax({
+      url: 'https://easebizz.com/projects/dating_app/admin/female_API/get_single_male_user.php?uid='+phone_no,
+      type:'POST',
+      dataType:'json',
+      success:function(data){
+        console.log(data);
+        $('.product_name').text(data['uname']);
+        $('.about').text(data['about']);
+        $('.profile_img').attr('src',data['img']);
+        $('.total_bal').text(data['total_bal']);
+      }
+
+    })
+
+    $.ajax({
+      url: 'https://easebizz.com/projects/dating_app/admin/API/get_user_hoby.php?user_id='+phone_no,
+      type:'POST',
+      dataType:'json',
+      success:function(data){
+        console.log(data);
+        for (var i = 0; i < data.length; i++) {
+                $('.hoby').append(
+                    '<button class="btn btn-primary" style="margin-right:1%;background:#fff;color:#ef4765;font-weight:600;width:auto;margin-bottom:10px;">'+data[i].hoby_name+'</button>'
+                    );
+            }
+      }
+
+    })
+</script>
+
+<script type="module">
+  let ZegoUIKitPrebuilt;
+
+  require(['js/zegocloudzego-uikit-prebuilt/zego-uikit-prebuilt'], (zegocloudzegoUikitPrebuilt) => {
+      ZegoUIKitPrebuilt = zegocloudzegoUikitPrebuilt.ZegoUIKitPrebuilt;
+  })
+
+  window.addEventListener('load', () => {
+      document.querySelector('#video_call_btn').addEventListener('click', invite)
+  })
+
+  function invite() {
+      const userID = new URL(window.location.href).searchParams.get('phone')
+
+      const targetUser = {
+          userID,
+      };
+
+      if(! zp) return
+
+      zp.sendCallInvitation({
+          callees: [targetUser],
+          callType: ZegoUIKitPrebuilt.InvitationTypeVideoCall,
+          timeout: 60, // Timeout duration (second). 60s by default, range from [1-600s].
+      }).then((res) => {
+          console.warn(res);
+      })
+      .catch((err) => {
+          console.warn(err);
+      });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SATHI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet" />
+    <link href="css/slick-theme.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <style media="screen">
+
+  .file-input__input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+
+
+  .file-input__label {
+      cursor: pointer;
+      height: 180px;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      font-size: 14px;
+      padding: 10px 12px;
+      background-color: #ACACAC;
+  }
+  .file-input__label2 {
+      cursor: pointer;
+      /* height: 180px; */
+      width: 100%;
+      display: block;
+      align-items: center;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 400;
+      color: #5E5E5E;
+      border: 1px solid #ACACAC;
+      font-size: 14px;
+      padding: 10px 30px;
+      margin-bottom: 15px;
+      background-color: transparent;
+  }
+  .file-input__label svg {
+    height: 16px;
+    margin-right: 4px;
+  }
+  .input-container {
+  	padding-bottom: 1em;
+  }
+  .right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 35px !important;
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 12px 12px;
+    pointer-events: none;
+}
+.right-inner-addon-b {
+    position: relative;
+}
+.right-inner-addon-b input {
+    padding-right: 35px !important;
+}
+.right-inner-addon-b i {
+    position: absolute;
+    right: 0px;
+    padding: 9px 12px;
+    pointer-events: none;
+}
+
+input {
+    width: 100%;
+		padding: 1em !important;
+		margin: 0em !important;
+		box-sizing: border-box;
+}
+
+#blah,#mask_adhar,#album1,#album2,#album3,#album4,#album5,#profile_pic {
+      display: none;
+    }
+  </style>
+  <form meyhod="POST" enctype="multipart/form-data" id="details_form">
+   <input type="hidden" class="phone_no" name="uid">
+   <div class="file-input">
+
+    <input type="file" name="file-input" id="file-input" class="file-input__input change_img" />
+    <label class="file-input__label" for="file-input">
+      <img id="blah" alt="your image" style="width:50%;height:100%;border-radius:50%;" />
+      <img src="images/camera_Icon.png" style="margin: 0 auto;" alt="">
+    </label>
+
+  </div>
+
+  <div class="block login_block">
+      <div class="login_cnt pp text-start" style="margin-bottom:30px;">
+        <input type="hidden" class="phone_no" name="uid">
+
+              <div class="login" style="">
+
+                <div>
+                <p style="margin-bottom:5px">Name</p>
+                        <div class="right-inner-addon input-container">
+                            <i><img src="images/Human_Icon.png"> </i>
+                            <input type="text" name="user_name" class="form-control" placeholder="Name" required />
+                        </div>
+                    </div>
+                    <div>
+                    <p style="margin-bottom:5px">Birthday</p>
+                            <div class="right-inner-addon input-container">
+                                <!-- <i><img src="images/date_Icon.png"> </i> -->
+                                <input type="date" name="user_dob" style="padding-right:1rem!important" required class="form-control"placeholder="dd-mm-yyyy" />
+                            </div>
+                        </div>
+
+                        <div>
+                        <p style="margin-bottom:5px">About Me</p>
+                                <div class="right-inner-addon input-container">
+                                    <!-- <i><img src="images/Male_Icon.png"> </i> -->
+                                    <textarea class="form-control" placeholder="About Me" name="user_about" required></textarea>
+                                    <!-- <input type="text"name="name" placeholder="Name" /> -->
+                                </div>
+                            </div>
+                            <p style="margin-bottom:5px">My Hobbies</p>
+                            <!-- <div class="" style="margin-bottom:20px">
+                              <button class="btn btn-primary" style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Singing</button>
+                              <button class="btn btn-primary" style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Dance</button>
+                              <button class="btn btn-primary" style="background:#fff;color:#ef4765;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Hangout</button>
+                              <button class="btn btn-primary" style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">TV</button>
+                              <button class="btn btn-primary" style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Night Out</button>
+                              <button class="btn btn-primary" style="background:#fff;color:#ef4765;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Reading Books</button>
+                              <button class="btn btn-primary" style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Tattoo</button>
+
+                            </div> -->
+
+                            <div class="">
+                              <button type="button" class="btn btn-primary hb1"
+                                style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Singing</button>
+                              <button type="button" class="btn btn-primary hb2"
+                                style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Dance</button>
+                              <button type="button" class="btn btn-primary hb3"
+                                style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Hangout</button>
+
+                              <button type="button" class="btn btn-primary hb4"
+                                style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">TV</button>
+                              <button type="button" class="btn btn-primary hb5"
+                                style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Night
+                                Out</button>
+                              <button type="button" class="btn btn-primary hb6"
+                                style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Reading
+                                Books</button>
+
+                              <button type="button" class="btn btn-primary hb7"
+                                style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Tattoo</button>
+
+                            </div>
+                            <div style="visibility: hidden;font-size:1px;">
+                              <input type="checkbox" style="width:10%;" name="hobbies[]" value="Singing" class="hobby1">Singing
+                              <input type="checkbox" style="width:10%;" name="hobbies[]" value="Dance" class="hobby2">Dance
+                              <input type="checkbox" style="width:10%;" name="hobbies[]" value="Hangout" class="hobby3">Hangout
+                              <input type="checkbox" style="width:10%;" name="hobbies[]" value="TV" class="hobby4">TV
+                              <input type="checkbox" style="width:10%;" name="hobbies[]" value="Night Out" class="hobby5">Night Out
+                              <input type="checkbox" style="width:10%;" name="hobbies[]" value="Reading Books" class="hobby6">Reading Books
+                              <input type="checkbox" style="width:10%;" name="hobbies[]" value="Tattoo" class="hobby7">Tattoo
+
+                            </div>
+
+                            <div>
+                            <p style="margin-bottom:5px">Referred by</p>
+                                    <div class="right-inner-addon input-container">
+                                        <i><img src="images/Human_Icon.png"> </i>
+                                        <input type="text"name="referred_by" class="form-control"placeholder="7785792974"/>
+                                    </div>
+                                </div>
+                                <p style="margin-bottom:5px;">Upload Mask Adhaar</p>
+                                <div class="file-input">
+                                  <input type="file" name="adhar_img" id="file-input2" class="file-input__input change_mask_adhar" required/>
+                                  <label class="file-input__label2" for="file-input2">
+                                  Upload
+                                  </label>
+                                </div>
+                                <img src="#" alt="eee" id="mask_adhar" style="height:80px;width:80px;">
+
+                                <p style="margin-bottom:5px;">Upload Selfie Video</p>
+                                <div class="file-input">
+                                  <input type="file" name="selfie_video" id="file-input10" class="file-input__input" required/>
+                                  <label class="file-input__label2" for="file-input10" style="margin-bottom:5px;" >Upload</label>
+                                </div>
+                                  <p style="margin-bottom:10px;" class="text-danger">Upto 15 seconds</p>
+                                  <p style="margin-bottom:5px;">Profile Photo</p>
+                                  <div class="file-input" style="">
+                                    <input type="file" name="profile_img"  id="file-input3" class="file-input__input change_profile_pic" required/>
+                                    <label class="file-input__label2" for="file-input3" style="" >Upload</label>
+                                  </div>
+                                  <img src="#" alt="eee" id="profile_pic" style="height:80px;width:80px;">
+                                  <div class="row" style="align-items:center;margin-bottom:20px;">
+                                    <div class="col-6">
+                                      <p style="margin-bottom:0px;">Album Photo</p>
+                                    </div>
+                                    <div class="col-6" align="right">
+                                      <a class="album2_btn"><img src="images/add-button.png" style="height:25px" class="img-fluid" alt=""></a>
+                                    </div>
+                                  </div>
+<style media="screen">
+  .album2,.album3,.album4,.album5{
+    opacity: 0;
+  }
+</style>
+
+                                  <div class="file-input" style="width:auto;display:inline-block">
+                                    <input type="file" name="album1" id="file-input4" class="file-input__input change_album1" />
+                                    <label class="file-input__label2" for="file-input4" style="display: inline-block;width: auto;" >Upload</label>
+                                  </div>
+
+                                  <div class="file-input album2" style="width:auto;display:inline-block;">
+                                    <input type="file" name="album2" id="file-input5" class="file-input__input change_album2" />
+                                    <label class="file-input__label2" for="file-input5" style="display: inline-block;width: auto;" >Upload</label>
+                                  </div>
+
+                                  <div class="file-input album3" style="width:auto;display:inline-block;">
+                                    <input type="file" name="album3" id="file-input6" class="file-input__input change_album3"/>
+                                    <label class="file-input__label2" for="file-input6" style="display: inline-block;width: auto;" >Upload</label>
+                                  </div>
+
+                                  <div class="file-input album4" style="width:auto;display:inline-block;">
+                                    <input type="file" name="album4" id="file-input7" class="file-input__input change_album4"/>
+                                    <label class="file-input__label2" for="file-input7" style="display: inline-block;width: auto;" >Upload</label>
+                                  </div>
+
+                                  <div class="file-input album5" style="width:auto;display:inline-block;">
+                                    <input type="file" name="album5" id="file-input8" class="file-input__input change_album5"/>
+                                    <label class="file-input__label2" for="file-input8" style="display: inline-block;width: auto;" >Upload</label>
+                                  </div>
+                                  <div>
+                                  <img src="#" alt="eee" id="album1" style="height:80px;width:80px;">
+                                  <img src="#" alt="eee" id="album2" style="height:80px;width:80px;">
+                                  <img src="#" alt="eee" id="album3" style="height:80px;width:80px;">
+                                  <img src="#" alt="eee" id="album4" style="height:80px;width:80px;">
+                                  <img src="#" alt="eee" id="album5" style="height:80px;width:80px;">
+                                  </div>
+<br>
+                            <!-- <a href="welcome.html" style=" display:inline-block;width:48%;margin-right:2%;"><button class="btn btn-primary" style="background:#fff;color:#ef4765;font-weight:600;">Skip for now</button></a> -->
+                            <button type="submit" class="btn btn-primary"style="font-weight: 600;">Continue</button>
+                                </form>
+          </div>
+      </div>
+
+
+
+  </div>
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="js/slick.js" type="text/javascript"></script>
+<script>
+      var uid =  window.localStorage.getItem("user_id");
+              console.log(uid);
+              $('.phone_no').val(uid);
+$(document).on('click','.album2_btn',function () {
+  $('.album2').css('opacity','1');
+  $(this).addClass('album3_btn');
+  $(this).removeClass('album2_btn');
+})
+$(document).on('click','.album3_btn',function () {
+  $('.album3').css('opacity','1');
+  $(this).addClass('album4_btn');
+  $(this).removeClass('album3_btn');
+})
+$(document).on('click','.album4_btn',function () {
+  $('.album4').css('opacity','1');
+  $(this).addClass('album5_btn');
+  $(this).removeClass('album4_btn');
+})
+$(document).on('click','.album5_btn',function () {
+  $('.album5').css('opacity','1');
+  $(this).css('display','none');
+  $(this).removeClass('album5_btn');
+})
+$('.con_btn').click(function(){
+  // window.location.href="add_profile.html";
+})
+function getCodeBoxElement(index) {
+  return document.getElementById('codeBox' + index);
+}
+function onKeyUpEvent(index, event) {
+  const eventCode = event.which || event.keyCode;
+  if (getCodeBoxElement(index).value.length === 1) {
+	 if (index !== 4) {
+		getCodeBoxElement(index+ 1).focus();
+	 } else {
+		getCodeBoxElement(index).blur();
+		// Submit code
+		console.log('submit code ');
+	 }
+  }
+  if (eventCode === 8 && index !== 1) {
+	 getCodeBoxElement(index - 1).focus();
+  }
+}
+function onFocusEvent(index) {
+  for (item = 1; item < index; item++) {
+	 const currentElement = getCodeBoxElement(item);
+	 if (!currentElement.value) {
+		  currentElement.focus();
+		  break;
+	 }
+  }
+}
+
+function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          $('#blah').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $(".change_img").change(function () {
+      $('#blah').show();
+      readURL(this);
+    });
+
+    $('.change_mask_adhar').change(function(){
+        const file = this.files[0];
+        console.log(file);
+        if (file){
+          let reader = new FileReader();
+          reader.onload = function(event){
+            console.log(event.target.result);
+            $('#mask_adhar').show();
+            $('#mask_adhar').attr('src', event.target.result);
+          }
+          reader.readAsDataURL(file);
+        }
+      });
+
+      $('.change_profile_pic').change(function(){
+        const file = this.files[0];
+        console.log(file);
+        if (file){
+          let reader = new FileReader();
+          reader.onload = function(event){
+            console.log(event.target.result);
+            $('#profile_pic').show();
+            $('#profile_pic').attr('src', event.target.result);
+          }
+          reader.readAsDataURL(file);
+        }
+      });
+
+      $('.change_album1').change(function(){
+        const file = this.files[0];
+        if (file){
+          let reader = new FileReader();
+          reader.onload = function(event){
+            console.log(event.target.result);
+            $('#album1').show();
+            $('#album1').attr('src', event.target.result);
+          }
+          reader.readAsDataURL(file);
+        }
+      });
+
+      $('.change_album2').change(function(){
+        const file = this.files[0];
+        if (file){
+          let reader = new FileReader();
+          reader.onload = function(event){
+            console.log(event.target.result);
+            $('#album2').show();
+            $('#album2').attr('src', event.target.result);
+          }
+          reader.readAsDataURL(file);
+        }
+      });
+
+      $('.change_album3').change(function(){
+        const file = this.files[0];
+        if (file){
+          let reader = new FileReader();
+          reader.onload = function(event){
+            console.log(event.target.result);
+            $('#album3').show();
+            $('#album3').attr('src', event.target.result);
+          }
+          reader.readAsDataURL(file);
+        }
+      });
+
+      $('.change_album4').change(function(){
+        const file = this.files[0];
+        if (file){
+          let reader = new FileReader();
+          reader.onload = function(event){
+            console.log(event.target.result);
+            $('#album4').show();
+            $('#album4').attr('src', event.target.result);
+          }
+          reader.readAsDataURL(file);
+        }
+      });
+
+      $('.change_album5').change(function(){
+        const file = this.files[0];
+        if (file){
+          let reader = new FileReader();
+          reader.onload = function(event){
+            console.log(event.target.result);
+            $('#album5').show();
+            $('#album5').attr('src', event.target.result);
+          }
+          reader.readAsDataURL(file);
+        }
+      });
+
+
+
+    $(".hb1").click(function () {
+      if ($('.hobby1').is(':checked')) {
+        $('.hobby1').prop('checked', false);
+        $('.hb1').css('color', '#ACACAC');
+        $('.hb1').css('border-color', '#ACACAC');
+      } else {
+        $('.hobby1').prop('checked', true);
+        $('.hb1').css('color', '#ef4765');
+        $('.hb1').css('border-color', '#ef4765');
+
+      }
+    });
+
+    $(".hb2").click(function () {
+      if ($('.hobby2').is(':checked')) {
+        $('.hobby2').prop('checked', false);
+        $('.hb2').css('color', '#ACACAC');
+        $('.hb2').css('border-color', '#ACACAC');
+      } else {
+        $('.hobby2').prop('checked', true);
+        $('.hb2').css('color', '#ef4765');
+        $('.hb2').css('border-color', '#ef4765');
+      }
+    });
+
+    $(".hb3").click(function () {
+      if ($('.hobby3').is(':checked')) {
+        $('.hobby3').prop('checked', false);
+        $('.hb3').css('color', '#ACACAC');
+        $('.hb3').css('border-color', '#ACACAC');
+      } else {
+        $('.hobby3').prop('checked', true);
+        $('.hb3').css('color', '#ef4765');
+        $('.hb3').css('border-color', '#ef4765');
+      }
+    });
+
+    $(".hb4").click(function () {
+      if ($('.hobby4').is(':checked')) {
+        $('.hobby4').prop('checked', false);
+        $('.hb4').css('color', '#ACACAC');
+        $('.hb4').css('border-color', '#ACACAC');
+      } else {
+        $('.hobby4').prop('checked', true);
+        $('.hb4').css('color', '#ef4765');
+        $('.hb4').css('border-color', '#ef4765');
+      }
+    });
+
+    $(".hb5").click(function () {
+      if ($('.hobby5').is(':checked')) {
+        $('.hobby5').prop('checked', false);
+        $('.hb5').css('color', '#ACACAC');
+        $('.hb5').css('border-color', '#ACACAC');
+      } else {
+        $('.hobby5').prop('checked', true);
+        $('.hb5').css('color', '#ef4765');
+        $('.hb5').css('border-color', '#ef4765');
+      }
+    });
+
+    $(".hb6").click(function () {
+      if ($('.hobby6').is(':checked')) {
+        $('.hobby6').prop('checked', false);
+        $('.hb6').css('color', '#ACACAC');
+        $('.hb6').css('border-color', '#ACACAC');
+      } else {
+        $('.hobby6').prop('checked', true);
+        $('.hb6').css('color', '#ef4765');
+        $('.hb6').css('border-color', '#ef4765');
+      }
+    });
+
+    $(".hb7").click(function () {
+      if ($('.hobby7').is(':checked')) {
+        $('.hobby7').prop('checked', false);
+        $('.hb7').css('color', '#ACACAC');
+        $('.hb7').css('border-color', '#ACACAC');
+      } else {
+        $('.hobby7').prop('checked', true);
+        $('.hb7').css('color', '#ef4765');
+        $('.hb7').css('border-color', '#ef4765');
+      }
+    });
+
+
+    $('#details_form').on('submit', function (e) {
+      e.preventDefault();
+      var data = new FormData(this);
+      $.ajax({
+        url: 'https://easebizz.com/projects/dating_app/admin/female_API/add_profile.php',
+        type: 'POST',
+        data: data,
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function (data) {
+        window.location.href = "welcome.html";
+        }
+      });
+    })
+</script>
+</body>
+
+</html>

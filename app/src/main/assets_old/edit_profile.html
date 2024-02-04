@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SATHI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet" />
+    <link href="css/slick-theme.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <style media="screen">
+
+  .file-input__input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+
+
+  .file-input__label {
+      cursor: pointer;
+      height: 180px;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      font-size: 14px;
+      padding: 10px 12px;
+      background-color: #ACACAC;
+  }
+  .file-input__label2 {
+      cursor: pointer;
+      /* height: 180px; */
+      width: 100%;
+      display: block;
+      align-items: center;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 400;
+      color: #5E5E5E;
+      border: 1px solid #ACACAC;
+      font-size: 14px;
+      padding: 10px 30px;
+      margin-bottom: 15px;
+      background-color: transparent;
+  }
+  .file-input__label svg {
+    height: 16px;
+    margin-right: 4px;
+  }
+  .input-container {
+  	padding-bottom: 1em;
+  }
+  .right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 35px !important;
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 12px 12px;
+    pointer-events: none;
+}
+.right-inner-addon-b {
+    position: relative;
+}
+.right-inner-addon-b input {
+    padding-right: 35px !important;
+}
+.right-inner-addon-b i {
+    position: absolute;
+    right: 0px;
+    padding: 9px 12px;
+    pointer-events: none;
+}
+
+input {
+    width: 100%;
+		padding: 1em !important;
+		margin: 0em !important;
+		box-sizing: border-box;
+}
+
+/* #blah,#mask_adhar,#album1,#album2,#album3,#album4,#album5,#profile_pic {
+      display: none;
+    } */
+  </style>
+  <form meyhod="POST" enctype="multipart/form-data" id="details_form">
+   <input type="hidden" class="phone_no" name="uid">
+   <div class="file-input"style="position:relative;overflow:hidden">
+
+    <input type="file" name="file-input" id="file-input" class="file-input__input change_img" />
+    <label class="file-input__label" for="file-input" >
+      <img id="blah" alt="your image" style="position: absolute;width: 100%;left: 0;top:-10%" />
+      <img src="images/camera_Icon.png" style="margin: 0 auto;z-index:99999" alt="">
+    </label>
+
+  </div>
+
+  <div class="block login_block">
+      <div class="login_cnt pp text-start" style="margin-bottom:30px;">
+        <input type="hidden" class="phone_no" name="uid">
+
+              <div class="login" style="">
+
+                <div>
+                <p style="margin-bottom:5px">Name</p>
+                        <div class="right-inner-addon input-container">
+                            <i><img src="images/Human_Icon.png"> </i>
+                            <input type="text" name="user_name" class="form-control profile_name" placeholder="Name" required />
+                        </div>
+                    </div>
+                    <div>
+                        <p style="margin-bottom:2px;font-size:17px;">Currnet Birthday : <span class="dob"></span></p>
+                    <p style="margin-bottom:5px">Birthday</p>
+                            <div class="right-inner-addon input-container">
+                                <!-- <i><img src="images/date_Icon.png"> </i> -->
+                                <input type="date" name="user_dob" style="padding-right:1rem!important"  class="form-control"placeholder="dd-mm-yyyy" />
+                            </div>
+                        </div>
+
+                        <div>
+                        <p style="margin-bottom:5px">About Me</p>
+                                <div class="right-inner-addon input-container">
+                                    <!-- <i><img src="images/Male_Icon.png"> </i> -->
+                                    <textarea class="form-control about" placeholder="About Me" name="user_about" required></textarea>
+                                    <!-- <input type="text"name="name" placeholder="Name" /> -->
+                                </div>
+                            </div>
+
+
+
+                            <!-- <a href="welcome.html" style=" display:inline-block;width:48%;margin-right:2%;"><button class="btn btn-primary" style="background:#fff;color:#ef4765;font-weight:600;">Skip for now</button></a> -->
+                            <button type="submit" class="btn btn-primary"style="font-weight: 600;">Continue</button>
+                                </form>
+          </div>
+      </div>
+
+
+
+  </div>
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="js/slick.js" type="text/javascript"></script>
+<script>
+      var uid =  window.localStorage.getItem("user_id");
+              console.log(uid);
+              $('.phone_no').val(uid);
+
+$('.con_btn').click(function(){
+  // window.location.href="add_profile.html";
+})
+function getCodeBoxElement(index) {
+  return document.getElementById('codeBox' + index);
+}
+function onKeyUpEvent(index, event) {
+  const eventCode = event.which || event.keyCode;
+  if (getCodeBoxElement(index).value.length === 1) {
+	 if (index !== 4) {
+		getCodeBoxElement(index+ 1).focus();
+	 } else {
+		getCodeBoxElement(index).blur();
+		// Submit code
+		console.log('submit code ');
+	 }
+  }
+  if (eventCode === 8 && index !== 1) {
+	 getCodeBoxElement(index - 1).focus();
+  }
+}
+function onFocusEvent(index) {
+  for (item = 1; item < index; item++) {
+	 const currentElement = getCodeBoxElement(item);
+	 if (!currentElement.value) {
+		  currentElement.focus();
+		  break;
+	 }
+  }
+}
+
+function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          $('#blah').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $(".change_img").change(function () {
+      $('#blah').show();
+      readURL(this);
+    });
+
+
+
+      $('.change_profile_pic').change(function(){
+        const file = this.files[0];
+        console.log(file);
+        if (file){
+          let reader = new FileReader();
+          reader.onload = function(event){
+            console.log(event.target.result);
+            $('#profile_pic').show();
+            $('#profile_pic').attr('src', event.target.result);
+          }
+          reader.readAsDataURL(file);
+        }
+      });
+
+
+    $('#details_form').on('submit', function (e) {
+      e.preventDefault();
+      var data = new FormData(this);
+      $.ajax({
+        url: 'https://easebizz.com/projects/dating_app/admin/female_API/edit_profile.php',
+        type: 'POST',
+        data: data,
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function (data) {
+         window.location.href = "my_profile.html";
+        }
+      });
+    })
+
+
+    $.ajax({
+        url: 'https://easebizz.com/projects/dating_app/admin/female_API/get_user.php?user_id=' + uid,
+        dataType: 'json',
+        type: 'GET',
+        success: function (data) {
+            console.log(data);
+            $('.profile_name').val(data['user_name']);
+            $('.dob').text(data['dob']);
+            $('#blah').attr('src', data['img']);
+            $('.about').text(data['about']);
+
+        }
+    });
+
+</script>
+</body>
+
+</html>
